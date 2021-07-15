@@ -1,0 +1,353 @@
+@font-face {
+    font-family: EightBit;
+    src: url("../font/8-BIT WONDER.TTF");
+}
+.game{
+    display:none;
+    grid-column-start: 2;
+    grid-row-start: 0;
+    grid-template-columns: auto 20px 10px 130px 15px 250px 15px 130px 10px 25px auto;
+    grid-template-rows: 80px 10px 40px 480px 10px 30px 30px 10px 30px 50px auto
+}
+body{
+    background-image: url("../img/background.jpg");
+    background-size: contain;
+}
+.main {
+    text-align:center;
+    font-family: EightBit, serif;
+    display: grid;
+    grid-template-columns: auto 20px 10px 130px 15px 250px 15px 130px 10px 25px auto;
+    grid-template-rows: 80px 10px 40px 480px 10px 30px 30px 10px 30px 50px auto
+}
+canvas {
+    border: 2px solid whitesmoke;
+}
+#stage {
+    grid-column-start: 6;
+    grid-row-start: 4;
+}
+
+#backGround{
+    background-image: url("../img/gameBackground.png");
+    background-size: cover;
+    border: 25px solid transparent;
+    padding: 15px;
+    border-image: url("../img/border.png") 25 round;
+    grid-column-start: 2;
+    grid-column-end: 11;
+    grid-row-start: 1;
+    grid-row-end: 11;
+}
+#title {
+    text-align: center;
+    margin-top: 35px;
+    color: yellow;
+    grid-column-start: 6;
+    grid-row-start: 1;
+}
+
+#highScoreInfo{
+    grid-column-start: 6;
+    grid-row-start: 7;
+    font-size: 20px;
+    color: white;
+}
+#highScore{
+    grid-column-start: 6;
+    grid-row-start: 8;
+    font-size: 20px;
+    color: yellow;
+}
+#restart{
+    grid-column-start: 4;
+    grid-row-start: 9;
+    margin-top:18px;
+    font-size: 15px;
+    color: white;
+}
+#restart:hover{
+    color:red;
+    cursor: pointer;
+}
+#quit{
+    grid-column-start: 8;
+    grid-row-start: 10;
+    font-size: 15px;
+    color: white;
+}
+#quit:hover{
+    color:darkorange;
+    cursor: pointer;
+}
+#author{
+    grid-column-start: 6;
+    grid-row-start: 10;
+    font-size: 7px;
+    color: white;
+}
+#rightGrid {
+    grid-column-start:7;
+    grid-row-start: 2;
+    display:grid;
+    grid-template-columns: 15px 120px 10px 15px 10px;
+    grid-template-rows:10px 40px 130px 20px 75px 20px 75px 20px 75px auto;
+    color: white;
+}
+#next {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    font-size: 25px
+}
+#nextPiece {
+    grid-column-start: 2;
+    grid-row-start: 3;
+}
+#nextPiece2 {
+    grid-column-start: 2;
+    grid-row-start: 5;
+}
+#nextPiece3 {
+    grid-column-start: 2;
+    grid-row-start: 7;
+}
+#nextPiece4 {
+    grid-column-start: 2;
+    grid-row-start: 9;
+}
+
+
+#leftGrid {
+    grid-column-start: 3;
+    grid-row-start: 2;
+    display: grid;
+    grid-template-columns: 10px 120px 10px 15px 10px;
+    grid-template-rows:10px 40px 130px 30px 30px 60px 30px 60px 50px auto;
+    color: white;
+}
+#reservePiece {
+     grid-column-start: 2;
+     grid-row-start: 3;
+ }
+#hold {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    font-size: 25px
+}
+#gameLevel {
+    grid-column-start: 2;
+    grid-row-start: 6;
+    font-size: 23px
+  }
+#points {
+    grid-column-start: 2;
+    grid-row-start: 8;
+    font-size: 23px
+}
+
+#linesCleared {
+    grid-column-start: 2;
+    grid-row-start: 10;
+    font-size: 23px
+}
+#levelInfo {
+    grid-column-start: 2;
+    grid-row-start: 5;
+}
+#scoreInfo {
+    grid-column-start: 2;
+    grid-row-start: 7;
+}
+#lineInfo {
+    grid-column-start: 2;
+    grid-row-start: 9;
+}
+
+.info{
+    text-align: right;
+    font-size: 16px;
+}
+.data{
+    text-align: right;
+    font-size: 30px;
+}
+
+#menuGrid {
+    grid-column-start:2;
+    grid-column-end:9;
+    grid-row-start: 1;
+    display:grid;
+    color: white;
+    grid-template-columns: 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px;
+    grid-template-rows:60px 60px 60px 60px 60px 30px 30px 30px 30px 30px 30px 60px 60px 60px 60px 60px 60px;
+}
+
+#titleImage {
+    background-image: url("../img/titleImage.png");
+    background-repeat: no-repeat ;
+    background-size: 360px;
+    grid-column-start: 3;
+    grid-column-end: 9;
+    grid-row-start: 5;
+
+}
+
+#startGame{
+    text-align: center;
+    grid-column-start:5;
+    grid-row-start: 8;
+    font-size: 24px;
+    color: white;
+}
+#startGame:hover{
+    color:red;
+    cursor: pointer;
+}
+
+#highScoreMenu{
+    text-align: center;
+    grid-column-start: 2;
+    grid-column-end:10;
+    grid-row-start: 15;
+    font-size: 24px;
+    color: yellow;
+}
+
+#levelSetInfo{
+    text-align: center;
+    grid-column-start:5;
+    grid-row-start:11;
+    font-size: 24px;
+    color: white;
+}
+#levelSet{
+    text-align: center;
+    margin-top: 6px;
+    grid-column-start:7;
+    grid-row-start:11;
+    font-size: 30px;
+    color: white;
+}
+#arrowUp{
+    grid-column-start:8;
+    grid-row-start:11;
+    margin-top: 5px;
+    background-image: url("../img/arrowUp.png");
+    background-size: 15px;
+    background-repeat: no-repeat;
+}
+
+#arrowDown{
+    grid-column-start:8;
+    grid-row-start:11;
+    grid-row-end:13;
+    margin-top: 35px;
+    background-image: url("../img/arrowDown.png");
+    background-size: 15px;
+    background-repeat: no-repeat;
+}
+#keyBind{
+    grid-column-start:5;
+    grid-row-start:13;
+    font-size: 24px;
+}
+#keyBind:hover{
+    cursor: pointer;
+    color: red;
+}
+
+.keyBind {
+    grid-column-start:2;
+    grid-column-end:9;
+    grid-row-start: 1;
+    display:none;
+    color: white;
+    grid-template-columns: 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px;
+    grid-template-rows:60px 60px 60px 100px  45px 45px 45px 45px 45px 45px 45px 45px 45px 45px 45px 60px 60px ;
+}
+
+#titleImage2 {
+    background-image: url("../img/titleImage.png");
+    background-repeat: no-repeat ;
+    background-size: 360px;
+    grid-column-start: 3;
+    grid-column-end: 9;
+    grid-row-start: 2;
+
+}
+#keyBindInfo{
+    text-align: center;
+    color: yellow;
+    grid-column-start:4;
+    grid-column-end:8;
+    grid-row-start: 4;
+}
+#leftBind{
+    text-align: center;
+    grid-column-start:2;
+    grid-column-end:10;
+    grid-row-start: 5;
+}
+#rightBind{
+    text-align: center;
+    grid-column-start:2;
+    grid-column-end: 10;
+    grid-row-start: 6;
+}
+#rotateBind{
+    text-align: center;
+    grid-column-start:2;
+    grid-column-end: 10;
+    grid-row-start: 7;
+}
+#softDropBind{
+    text-align: center;
+    grid-column-start:2;
+    grid-column-end: 10;
+    grid-row-start: 8;
+}
+#hardDropBind{
+    text-align: center;
+    grid-column-start:2;
+    grid-column-end: 10;
+    grid-row-start: 9;
+}
+#holdBind{
+    text-align: center;
+    grid-column-start:2;
+    grid-column-end: 10;
+    grid-row-start: 10;
+}
+#defaultKeys{
+    text-align: center;
+    grid-column-start:2;
+    grid-column-end: 10;
+    grid-row-start: 13;
+    color: yellow;
+}
+#defaultKeys:hover{
+    color: darkorange;
+}
+
+#backToMenu{
+    text-align: center;
+    grid-column-start:2;
+    grid-column-end: 10;
+    grid-row-start: 14;
+    color: yellow;
+}
+#backToMenu:hover{
+    color: darkorange;
+    cursor: pointer;
+}
+.bind:hover{
+    color: blue !important;
+    cursor: pointer;
+}
+
+
+
+
+
+
+

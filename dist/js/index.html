@@ -1,0 +1,68 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Tetris</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+  <link rel="stylesheet" href="../css/style.css">
+
+
+</head>
+<body>
+<div class="main">
+  <div class="game">
+    <div id="backGround"></div>
+    <div id="title"><h1>TETRIS</h1></div>
+    <div id="highScoreInfo">High Score:</div>
+    <div id="highScore">0</div>
+    <div id="restart">Restart Game</div>
+    <div id="quit">Quit Game</div>
+    <div id="author">Created by Pablo Ra</div>
+    <canvas id="stage" height="500" width="250"></canvas>
+    <div id="rightGrid">
+      <div class="info" id="next">NEXT</div>
+      <canvas id="nextPiece" height="130" width="130"></canvas>
+      <canvas id="nextPiece2" height="75" width="75"></canvas>
+      <canvas id="nextPiece3" height="75" width="75"></canvas>
+      <canvas id="nextPiece4" height="75" width="75"></canvas>
+    </div>
+
+    <div id="leftGrid">
+      <div class="info" id="hold">HOLD</div>
+      <canvas id="reservePiece" height="130" width="130"></canvas>
+      <div class="info" id="levelInfo">Level</div>
+      <div class="info" id="scoreInfo">Score</div>
+      <div class="info" id="lineInfo">Lines Cleared</div>
+      <div class="data" id="points">0</div>
+      <div class="data" id="gameLevel">0</div>
+      <div class="data" id="linesCleared">0</div>
+    </div>
+  </div>
+  <div class="menu" id="menuGrid">
+    <div class="info" id="titleImage"></div>
+    <div class="info" id="startGame">Start Game</div>
+    <div class="info" id="highScoreMenu">HighScore: 0</div>
+    <div class="info" id="levelSetInfo">Set Level</div>
+    <div class="data" id="levelSet">0</div>
+    <div class="info" id="arrowUp"></div>
+    <div class="info" id="arrowDown"></div>
+    <div class="info" id="keyBind">Key Binds</div>
+  </div>
+  <div class="keyBind">
+    <div class="info" id="titleImage2"></div>
+    <div class="info" id="keyBindInfo">Click to set key binds</div>
+    <div class="bind" id="leftBind">Move Left: ArrowLeft</div>
+    <div class="bind" id="rightBind">Move Right: ArrowRight</div>
+    <div class="bind" id="rotateBind">Rotate Piece: ArrowUp</div>
+    <div class="bind" id="softDropBind">Soft Drop: ArrowDown</div>
+    <div class="bind" id="hardDropBind">Hard Drop: Space</div>
+    <div class="bind" id="holdBind">Hold Piece: ShiftLeft</div>
+    <div class="bind" id="defaultKeys">Set Default Keys</div>
+    <div class="info" id="backToMenu">Back to Menu</div>
+  </div>
+</div>
+<script type="text/javascript" src="js/bundle.js"></script></body>
+</html>
